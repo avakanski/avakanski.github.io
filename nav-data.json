@@ -1,0 +1,12 @@
+{
+    "navItems": [
+        {"text": "Home", "url": "index.html"},
+        {"text": "Teaching", "url": "teaching.html"},
+        {"text": "Research", "url": "research.html"},
+        {"text": "Publications", "url": "publications.html"},
+        {"text": "Curriculum Vitae", "url": "curriculum_vitae.html"},
+        {"text": "Blog", "url": "blog.html"},
+        {"text": "Codes and Data", "url": "codes_data.html"},
+        {"text": "Contact", "url": "contact.html"}
+    ]
+}

@@ -1,0 +1,479 @@
+:root {
+    --gold: #C3964D; /* PMS 3514 C */
+    --dark-gray: #808080;
+    --light-gray: #e5e5e5;
+    --white: #fff;
+    --text-color: #000;
+    --dark-gold: #A67C00; /* Softer variant of gold for links */
+    --index-link-color: #4A4A4A; /* Changed to a dark grey color */
+}
+
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5; /* Reduced from 1.6 */
+    color: var(--text-color);
+    background-color: var(--dark-gray);
+    margin: 0;
+    padding: 0;
+    font-size: 0.95em; /* Added to reduce the overall font size */
+}
+
+.container {
+    max-width: 1000px; /* Reduced from 1200px to 1000px */
+    margin: 0 auto;
+    padding: 20px 0; /* Changed from padding: 20px; */
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Default link styles (for all pages except index) */
+a {
+    color: var(--dark-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #C39B3A; /* Slightly lighter than --dark-gold for hover state */
+    text-decoration: underline;
+}
+
+/* Link styles for index page */
+.index-page a {
+    color: #4A4A20; /* Warmer gray with more gold */
+    text-decoration: none; /* Remove underline */
+    padding: 0 1px; /* Slight padding to separate from text */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.index-page a:hover {
+    color: var(--gold);
+}
+
+/* Keep navigation links as they were */
+.index-page nav ul li a {
+    color: var(--dark-gold);
+    background-color: transparent;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.index-page nav ul li a:hover {
+    color: #C39B3A;
+    background-color: var(--white);
+}
+
+/* Header styles */
+header {
+    background-color: var(--white);
+    color: var(--text-color);
+    padding: 10px 0; /* Changed back to 10px */
+    border-bottom: 2px solid var(--gold);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; /* Add padding to match main content */
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.6em;
+    color: #333333; /* This dark gray color will now apply to the entire h1, including the name */
+    line-height: 1.2;
+    text-align: left;
+}
+
+/* Remove or comment out this rule if it exists */
+/*
+h1 .name {
+    color: var(--gold);
+}
+*/
+
+.ui-logo {
+    height: 50px;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Added to remove any default margin */
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--light-gray);
+}
+
+nav ul li {
+    padding: 5px 0; /* Reduced from 10px to 5px */
+}
+
+nav ul li a {
+    color: var(--dark-gold);
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: var(--white);
+    color: #C39B3A; /* Slightly lighter than --dark-gold for hover state */
+}
+
+/* Main content styles */
+main {
+    padding: 10px 40px 20px 40px;
+}
+
+/* Create a content wrapper for consistent alignment */
+.content-wrapper {
+    max-width: 920px; /* Adjusted from 1120px to 920px */
+    margin: 0 auto;
+    padding: 0; /* Changed from 0 60px 0 80px */
+}
+
+/* Reset margins for all direct children of main */
+main > * {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Styles for h2 elements (main title) */
+main h2 {
+    color: #333333;
+    font-size: 1.4em; /* Reduced from 1.5em to 1.4em as requested */
+    margin-bottom: 0.6em;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+/* Adjust this rule if it exists in your CSS */
+.publications .section-title,
+main > h2,
+main > h3 {
+    font-size: 1.4em; /* Reduced to match the new h2 size */
+    margin-bottom: 0.6em;
+    color: #333333;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+/* Adjust the course table width */
+.course-table {
+    width: 100%;
+}
+
+/* Profile section styles */
+.profile {
+    margin-bottom: 30px;
+}
+
+.profile-content {
+    display: grid !important;
+    grid-template-columns: 1fr 220px !important; /* Increased to 220px to match image width */
+    gap: 20px;
+    align-items: start;
+}
+
+.profile-info {
+    grid-column: 1 !important;
+}
+
+.profile-image-container {
+    grid-column: 2 !important;
+    padding-top: 60px; /* Keep this to move the image down */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-self: start; /* This will move the image to the left */
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border: 3px solid var(--gold);
+}
+
+.social-icons {
+    font-size: 1.5em;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    color: var(--gold); /* PMS 3514 C for social icons */
+    position: relative;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #D6A75D; /* Slightly lighter version of PMS 3514 C for hover state */
+}
+
+/* Tooltip styles */
+.social-icons a::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.social-icons a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #333333; /* Changed from var(--gold) to a dark gray */
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+    width: 95%; /* Make the footer slightly narrower than the main content */
+    max-width: 950px; /* Adjust this value based on your main container's max-width */
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 5px; /* Optional: add rounded corners to the top of the footer */
+    border-top-right-radius: 5px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile {
+        position: static;
+        min-height: auto;
+    }
+
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info {
+        grid-row: 2;
+        grid-column: 1;
+        text-align: center;
+    }
+
+    .profile-image-container {
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: center;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.course-table td {
+    padding: 5px 5px; /* Reduced horizontal padding from 10px to 5px */
+    vertical-align: top;
+}
+
+.course-table .course-number {
+    width: 80px; /* Reduced from 100px to 80px */
+    font-weight: normal;
+    padding-right: 0; /* Remove right padding for course number */
+}
+
+.course-table .course-number a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.course-table .course-number a:hover {
+    text-decoration: underline;
+}
+
+.publications .section-title,
+main > h2,
+main > h3 {
+    font-size: 1.4em; /* Reduced to match the new h2 size */
+    margin-bottom: 0.6em;
+    color: #333333;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+main > h3 {
+    font-size: 1.3em; /* Adjusted to be slightly smaller than h2 */
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    color: #333333;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+.publications h3 {
+    font-size: 1.5em;  /* Reduced from 1.8em */
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    color: #333333; /* Changed from var(--gold) to a dark gray */
+}
+
+main p {
+    text-align: justify;
+    margin-bottom: 0.8em; /* Reduced from the default (usually 1em) */
+}
+
+/* Add this new rule for publications list */
+main ol li {
+    text-align: justify;
+    margin-bottom: 0.5em; /* Added to reduce space between list items */
+}
+
+/* Centered figure styles */
+.centered-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.centered-figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+.centered-figure figcaption {
+    margin-top: 8px; /* Reduced from 10px */
+    font-style: italic;
+    max-width: 80%;
+    font-size: 0.9em; /* Added to make captions slightly smaller */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.image-row img {
+    width: 32%; /* Adjust this value to control the width of each image */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Reduce spacing in course tables */
+.course-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.course-table td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+.course-table .course-number {
+    width: 100px;
+    font-weight: normal; /* Changed from bold to normal */
+}
+
+/* Reduce spacing in lists */
+main ul {
+    padding-left: 2em; /* Adjust this value as needed */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+main ul li, main ol li {
+    text-align: justify;
+    margin-bottom: 0.5em; /* Add some vertical spacing between list items */
+}
+
+/* Adjust heading margins */
+main h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+main h4 {
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+}
+
+/* Reduce spacing between individual publications */
+.publications ol {
+    padding-left: 20px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.publications ol li {
+    margin-bottom: 0.1em; /* Significantly reduced from previous values */
+}
+
+/* Tighten up the spacing within each publication entry */
+.publications ol li p {
+    margin-bottom: 0em; /* Remove bottom margin between paragraphs within a publication */
+    line-height: 1.2; /* Further reduced line height for publication text */
+}
+
+/* Adjust spacing for publication category headers */
+.publications h3 {
+    font-size: 1.3em; /* Reduced from 1.4em to 1.3em as requested */
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    color: #333333;
+}
+
+/* If publications are nested in another element, target that as well */
+.publications > div > ol > li {
+    margin-bottom: 0.1em;
+}
+
+/* Remove any additional spacing that might be added by default styles */
+.publications ol li * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+main h4 {
+    font-size: 1.1em; /* Slightly smaller than h3 */
+    margin-top: 1em
+}

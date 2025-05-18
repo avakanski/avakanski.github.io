@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codes and Data - Aleksandar Vakanski</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="nav.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Aleksandar (Alex) Vakanski</h1>
+                <a href="http://www.uidaho.edu/">
+                    <img src="UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+                </a>
+            </div>
+        </header>
+
+        <nav id="main-nav"></nav>
+
+        <main class="codes-data-content">
+            <h2>Codes and Data</h2>
+
+            <section>
+                <h3>University of Idaho – Physical Rehabilitation Movement Dataset</h3>
+                <p><a href="http://www.webpages.uidaho.edu/ui-prmd">Link to dataset</a></p>
+                <p>UI-PRMD is a data set of movements related to common exercises performed by patients in physical therapy and rehabilitation programs. The data set consists of 10 rehabilitation exercises. A sample of 10 healthy individuals repeated each 
+			   exercise 10 times in front of two sensory systems for motion capturing: 
+					a Vicon optical tracker, and a Kinect camera. The data is presented as positions and angles of the body joints in the skeletal models provided by the Vicon and Kinect mocap systems.</p>
+            </section>
+
+            <section>
+                <h3>Codes for Attention-Enriched Deep Learning Model for Breast Tumor Segmentation</h3>
+                <p><a href="https://github.com/avakanski/Attention-Enriched-DL-Model-for-Breast-Tumor-Segmentation">GitHub Repository</a></p>
+                <p>The codes provide the implementation of our <a href="https://www.sciencedirect.com/science/article/abs/pii/S0301562920302878">work</a> on breast tumor segmentation using a salient attention deep learning model.
+					Our proposed approach integrates prior knowledge of visual saliency into a deep learning model for tumor segmentation in ultrasound images. Visual saliency refers to image maps containing regions that are more likely to attract radiologists’ visual attention. The 
+					model introduces attention blocks into a U-Net architecture and learns feature representations that prioritize spatial regions with high saliency levels. The validation results indicate increased accuracy for tumor segmentation relative to models without salient attention layers.</p>
+            </section>
+
+            <section>
+                <h3>Codes for Uncertainty Quantification of Creep Rupture Life</h3>
+                <p><a href="https://github.com/avakanski/Creep-uncertainty-quantification">GitHub Repository</a></p>
+                <p>The repository is based on our <a href="https://arxiv.org/abs/2311.02495">work</a> on physics-informed Bayesian Neural Networks (BNNs) approach for uncertainty quantification, 
+					which integrates knowledge from governing laws in materials to guide the models toward physically consistent predictions. To evaluate the approach, 
+					we present case studies for predicting the creep rupture life of three steel alloys. The codes provide implementations of common machine learning methods for uncertainty quantification, 
+					including Quantile Regression, Natural Gradient Boosting, Gaussian Process Regression, Deep Ensemble, MC Dropout, BNN – VI (Variational Inference), and BNN – MCMC (Markov Chain Monte Carlo). 
+					Additionally, we evaluate the suitability of the proposed approach for uncertainty quantification in an active learning scenario.</p>
+            </section>
+
+            <section>
+                <h3>Codes for A Deep Learning Framework for Assessing Physical Rehabilitation Exercises</h3>
+                <p><a href="https://github.com/avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises">GitHub Repository</a></p>
+                <p>The codes are based on the research project <a href="https://arxiv.org/abs/1901.10435">A Deep Learning Framework for Assessing Physical Rehabilitation 
+					Exercises</a>. The framework for automated quality assessment of physical rehabilitation exercises encompasses metrics for quantifying movement performance, scoring functions for 
+					mapping the performance metrics into numerical scores of movement quality, techniques for dimensionality reduction, and deep neural network models for regressing quality scores of input movements 
+					via supervised learning. The proposed framework employs an autoencoder network for dimensionality reduction, a performance metric based on the log-likelihood of a Gaussian mixture model, and a deep 
+					convolutional neural network for movement assessment. The spatio-temporal neural network arranges data into temporal pyramids, and exploits the spatial characteristics of human movements by using 
+					dedicated sub-networks for processing the joint displacements of individual body parts.</p>
+                <p>A reproducible version of the codes is also published on Code Ocean and can be accessed via the following link: <a href="https://codeocean.com/capsule/7213982/tree/v3">https://codeocean.com/capsule/7213982/tree/v3</a>.</p>
+                <script src="https://codeocean.com/widget.js?slug=7213982" width="600"></script>
+            </section>
+
+            <section>
+                <h3>A Dataset of Multispectral Potato Plants Images</h3>
+                <p><a href="https://www.webpages.uidaho.edu/vakanski/Multispectral_Images_Dataset.html">Link to dataset</a></p>
+                <p>The dataset contains aerial agricultural images of a potato field with manual labels of healthy and 
+					stressed plant regions. 
+					The images were collected with a Parrot Sequoia multispectral camera carried by a 3DR Solo drone flying at an altitude of 3 meters. The dataset consists 
+					of RGB images with a resolution of 750×750 pixels, and spectral monochrome red, green, 
+					red-edge, and near-infrared images with a resolution of 416×416 pixels, and XML files with annotated bounding boxes of healthy and 
+					stressed potato crop. 
+				</p>
+            </section>
+
+            <section>
+                <h3>Codes for Rehabilitation Assessment through Dimensionality Reduction and Statistical Modeling</h3>
+                <p><a href="https://github.com/avakanski/Rehabilitation-Assessment-through-Dimensionality-Reduction-and-Statistical-Modeling">GitHub Repository</a></p>
+                <p>Codes for the paper <a href="https://www.sciencedirect.com/science/article/abs/pii/S1350453319302127?via%3Dihub">Williams et al. (2019)</a> use a method for evaluation of the consistency of human movements within the context of physical therapy and rehabilitation. 
+					Captured movement data in the form of joint angular displacements in a skeletal human model are 
+					used. The proposed approach employs an autoencoder neural network to project 
+					the high-dimensional movement trajectories into a low-dimensional manifold. 
+					Afterwards, a Gaussian mixture model is used to derive a parametric 
+					probabilistic model of the density of low-dimensional embeddings. The resulting 
+					probabilistic model is employed for evaluation of the consistency of unseen 
+					movement sequences based on the likelihood of the data being drawn from the model.</p>
+                <p>A reproducible version of the codes is published on Code Ocean and can be accessed via the following link: <a href="https://codeocean.com/capsule/7037240/tree/v1">https://codeocean.com/capsule/7037240/tree/v1</a>.</p>
+            </section>
+
+            <section>
+                <h3>MATLAB codes for Visual Servoing</h3>
+                <p><a href="Codes_Data/VS toolbox for MATLAB.zip">Download link</a> (0.1 MB)</p>
+                <p>The toolbox contains MATLAB codes for image-based (IBVS) and position-based (PBVS) visual servoing. Eye-in-hand configuration of the camera has been considered. 
+					The codes are based on the Visual Servoing Toolbox for MATLAB/Simulink [E. Cervera, "Visual  servoing toolbox for MATLAB/Simulink," 2003, 
+					available online:<a href="http://vstoolbox.sourceforge.net/"> http://vstoolbox.sourceforge.net/</a>]. 
+					The toolbox transferred  the Simulink models into MATLAB codes. I used some of the functions from the 
+					Visual Servoing Toolbox for MATLAB/Simulink (e.g., camera, ht, polyhedra), and I modified some of the existing functions. The codes 
+					provided here work  independently, i.e., you don't need to install the Visual Servoing Toolbox for MATLAB/Simulink in order to run them.
+					Please let me  know if you can't run the codes, if you find errors, or if you have any  questions regarding the codes.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

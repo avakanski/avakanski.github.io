@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Dataset of Multispectral Potato Plants Images</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="nav.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><span class="name">Aleksandar (Alex) Vakanski</span></h1>
+                <a href="http://www.uidaho.edu/">
+                    <img src="UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+                </a>
+            </div>
+        </header>
+
+        <nav id="main-nav"></nav>
+
+        <main>
+            <section>
+                <h2>A Dataset of Multispectral Potato Plants Images</h2>
+                <p>The dataset contains aerial images of potato crop and it can be used for training machine learning models for crop health assessment in precision agriculture applications. The images were collected from a field located at the Aberdeen Research and Extension Center - University of Idaho. A Parrot Sequoia multispectral camera mounted on a 3DR Solo drone was used for image acquisition. Sequoia features several sensors: an RGB sensor with 4,608×3,456 pixels (16 Megapixels) resolution, and four monochrome sensors with 1,280×960 pixels (1.2 Megapixels) resolution capturing narrow bands of light wavelengths: green (550 nm), red (660 nm), red-edge (735 nm), and near-infrared (790 nm). The images were collected by flying the drone over the potato field at a low altitude of 3 meters (≈10 feet). The objective was to capture drought stress in Russet Burbank potato plants due to premature plant senescence.</p>
+
+                <p>The dataset consists of 360 RGB image patches of size 750×750 pixels in JPG format, divided into a training subset of 300 images and a testing subset of 60 images. The image patches were extracted from the aerial high-resolution images by using cropping, rotating, and resizing operations. Each image is associated with ground-truth annotations (provided are both XML and CSV files), related to the regions with healthy and stressed plants, outlined in the images with rectangular bounding boxes. We used the graphical annotation software LabelImg to manually label the crop regions in the images into two classes: healthy and stressed. The testing subset of images is independent of the training subset, i.e., the image patches for model testing were extracted from different aerial images. The dataset also includes the corresponding image patches of the spectral sensors with red, green, red-edge, and near-infrared bands, having 416×416 pixels size.</p>
+
+                <p>The dataset is suited for training machine learning algorithms to quantify the level of crop health in a field, based on detecting healthy vs. stressed plants. We designed the dataset with a goal to provide images that contain both healthy and stressed classes of crop, and maintain a class balance across the images in the dataset. Admittedly, a limitation of the dataset is the low number of images. Therefore, applying data augmentation and/or transfer learning techniques is strongly recommended. For instance, the second dataset below applies image augmentation by rescaling the pixels' intensity in original images, adjusting the gamma value of image brightness, adjusting the sigmoid value of image contrast, and applying a small amount of random noise to the images. Using data augmentation, the initial training set was increased to 1,500 images, whereas data augmentation was not applied to the testing set.</p>
+
+                <h3>Dataset Organization</h3>
+                <ul>
+                    <li><a href="Codes_Data/RGB_Images.zip">RGB Image Patches</a> (38 MB) – 360 images (3 channels, 750×750 pixels) collected with the RGB sensor and the corresponding labels (in XML and CSV format). The images are divided into a training subset of 300 images, and a testing subset of 60 images.</li>
+                    <li><a href="Codes_Data/RGB_Augmented.zip">RGB Image Patches - Augmented Dataset</a> (199 MB) – 1,500 augmented training images and 60 testing images (3 channels, 750×750 pixels) collected with the RGB sensor and the corresponding labels (in XML and CSV format).</li>
+                    <li><a href="Codes_Data/Spectral_Images.zip">Spectral Image Patches</a> (46 MB) – 360 images (1 channel, 416×416 pixels) for each of the four spectral bands (red, green, red-edge, and near-infrared) and the corresponding labels (in XML and CSV format). The images are divided into a training subset of 300 images, and a testing subset of 60 testing images.</li>
+                    <li><a href="Codes_Data/Spectral_Augmented.zip">Spectral Image Patches - Augmented Dataset</a> (248 MB) – 1,500 augmented training images and 60 testing images (1 channel, 416×416 pixels) for each of the four spectral bands (red, green, red-edge, and near-infrared) and the corresponding labels (in XML and CSV format).</li>
+                </ul>
+
+                <h3>Examples of Images in the Dataset</h3>
+                <img src="Images/Potato_crop.png" alt="Potato crop images" style="max-width: 100%; height: auto;">
+
+                <h3>Acknowledgments</h3>
+                <p>The project for creating the dataset was supported through a Seed Grant awarded by the Office of Research and Economic Development (ORED) at the University of Idaho.</p>
+                <p>I would like to acknowledge and thank Dr. Kasia Duellman for designing and preparing the plots and for allowing us to collect crop images at the Aberdeen Research and Extension Center, Jordan Todd for his help with setting up the drone, the camera, and collecting the images, and Sujata Butte and Haotian Wang for their help with organizing the images.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
