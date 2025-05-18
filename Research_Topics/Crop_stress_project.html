@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandar Vakanski - Crop Health Assessment in Precision Agriculture</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <script src="../nav.js" defer></script>
+    
+    <!-- Add UI-specific CSS for the footer -->
+    <link rel="stylesheet" href="../ui-footer-styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="header-content">
+            <h1>Aleksandar (Alex) Vakanski</h1>
+            <a href="http://www.uidaho.edu/">
+                <img src="../UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+            </a>
+        </div>
+    </header>
+    
+    <nav id="main-nav"></nav>
+
+    <main>
+        <h3>Crop Health Assessment in Precision Agriculture</h3>
+        <p>Precision agriculture (PA), or precision farming, is a concept for site-specific crop management based on observation and measurement of the 
+        crop variability in the field. The objective of PA is to reduce the use of herbicides, pesticides, fertilizers, and other chemical substances, and to increase crop yield. 
+        This objective can be achieved by using advanced technologies, where based on obtained knowledge growers can make informed decisions regarding the amount of 
+        herbicide or fertilizer to be applied to different areas in the field. Despite the confirmed economic and environmental benefits of PA, professional reports and scientific surveys 
+        indicate low rates of adoption. Among the many barriers towards increased adoption of PA, the need for new tools for agricultural data 
+        analytics that are 'useful' and 'easy to use' has been acknowledged as an essential factor.</p>
+
+        <p>The project proposes an approach for precision agriculture related to the assessment of crop health from aerial images collected with Unmanned Aerial Systems (UAS), popularly known as 'drones'. 
+        The research focuses on the implementation of deep artificial neural networks (NN) for processing crop images. 
+        The ultimate goal is the design of NNs to distinguish healthy from diseased plants in aerial images, based on a set of learned features.</p>
+
+        <p>Although there is a large body of work on image-processing for crop health assessment based on the conventional machine vision approaches, only a few recent works have applied 
+        deep NN approaches for such tasks to natural field images. One challenge is the lack of large-scale labeled crop image datasets, as the performance of NN is reliant on the amount and quality of available data; 
+        furthermore, for satisfactory performance the field images are preferred to be crop-specific, and even region-specific. 
+        The proposed research addresses the problem of lack of agricultural data by providing an <a href="../Multispectral_Images_Dataset.html">open dataset</a> of multispectral aerial images of potato crop with labeled regions of healthy and stressed plants.</p>
+
+        <p>Advancing the data analytics aspects of PA also requires novel designs of deep NN architectures that are able to process natural aerial images of crop fields obtained 
+        by remote sensing. Rather than relying on models for classification of objects in images, a shift toward deep models that perform more challenging image processing tasks is needed, 
+        such as object detection. The goal in object detection is to: identify whether certain objects of interest (e.g., stressed plants) are present in an image, 
+        find the coordinates of the location of all present objects of interest in the image, and determine the category (i.e., disease or stress type) for all found objects. 
+        The project addresses two aspects of crop health evaluation: (a) spatial recognition of crop stress, and (b) temporal correlation of crop stress 
+        in images taken at different times during the growing season.</p>
+
+        <figure class="centered-figure">
+            <img src="../Images/Potato_crop.png" style="height: 360px;" alt="Potato crop image">
+            <figcaption>Figure: Potato crop aerial image with detected stress regions.</figcaption>
+        </figure>
+
+        <h3>Publications</h3>
+        <ol>
+            <li id="butte2021potato">S. Butte, <b><strong>A. Vakanski</strong></b>, K. Duellman, H. Wang, and A. Mirkouei, "Potato crop stress identification in aerial images using deep learning-based object detection," <em>Agronomy Journal</em>, vol. 113, no. 5, pp. 3991–4002, Sep. 2021. [<a href="../Articles/ref_Butte2021.tex">Bibtex</a>] [<a href="https://doi.org/10.1002/agj2.20841">Wiley Online Library</a>]&nbsp;<a href="../Articles/Butte_(2021)_Potato_crop_stress_identification_in_aerial_images_using_DL.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

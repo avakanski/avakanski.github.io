@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandar Vakanski - Machine Learning for Materials Property Prediction</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <script src="../nav.js" defer></script>
+    
+    <!-- Add UI-specific CSS for the footer -->
+    <link rel="stylesheet" href="../ui-footer-styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="header-content">
+            <h1>Aleksandar (Alex) Vakanski</h1>
+            <a href="http://www.uidaho.edu/">
+                <img src="../UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+            </a>
+        </div>
+    </header>
+    
+    <nav id="main-nav"></nav>
+
+    <main>
+        <h3>Machine Learning for Materials Property Prediction</h3>
+        <p>The integration of Machine Learning (ML) methods in material science offers unprecedented potential for automating data analysis and interpretation, 
+        enhancing the discovery of complex relationships between material properties and performance metrics, which can subsequently lead to more efficient design processes and reduce the development times for new materials.</p>
+        
+        <p>In a <a href="#li2024dataset">collaborative project</a> with researchers from Idaho National Laboratory, we studied the impact of size effect on material properties in nuclear structural materials. Toward this goal, our team created a dataset of over 1,000 tensile test records for sub-sized specimens, and developed ML-based approaches for predicting tensile properties of materials, such as strength and ductility. We evaluated the validity of critical specimen dimensions for the size effect in tensile tests, and assessed analytical models for correlating the properties between sub-sized and standard-sized specimens. Our work highlights the potential of ML for addressing the size effect in materials, as well as the importance of large, open-source databases to support further research in this area.</p>
+        
+        <p>Another research topic our team investigates is related to quantifying the uncertainty in integrating data-driven approaches for predicting material properties. Reliable uncertainty quantification is essential for informed decision-making, as it provides a measure of confidence in the predictions and helps mitigate risks associated with materials performance. Accordingly, various approaches for uncertainty quantification have been developed, either through a quantified measure of the variance in the target variable, via confidence intervals, or by other means. Among the conventional methods for multivariable regression, Gaussian Process Regression (GPR) has been generally adopted as the state-of-the-art approach that provides accurate single-point predictions and reliable uncertainty estimates. However, GPR also has important limitations, since the commonly used isotropic covariance kernels, such as Gaussian and Matern kernels, are less suitable for modeling functions with spurious covariates or anisotropic smoothness.</p>
+        
+        <p>Bayesian Neural Networks (BNNs) have recently emerged as a promising approach for uncertainty quantification, providing a probabilistic framework for capturing uncertainties within neural networks. Our work introduces an approach for uncertainty quantification based on <a href="#li2024uncertainty">physics-informed BNNs</a>, which integrates knowledge from governing laws in material modeling to guide the networks toward physically consistent predictions. Applied for predicting creep rupture life prediction of steel alloys, our findings indicate that BNNs based on Markov Chain Monte Carlo approximation of the posterior distribution of network parameters outperform other methods, such as BNNs based on variational inference and conventional ML models. In another study, we extended this approach to predicting the fatigue life in metal materials such as Titanium and Carbon steel alloys, through integrating physics-based fatigue models with ML techniques. These studies demonstrate that embedding knowledge from physics-based fatigue models into data-driven frameworks enhances the consistency of predictions and yields more reliable confidence intervals for the considered material properties.</p>
+        
+        <p>Another work by our research lab <a href="#karimzadeh2024fgms">reviews</a> the use of ML techniques in Additive Manufacturing (AM), focusing on optimizing the fabrication of Functionally Graded Materials (FGMs). The work explores the role of ML in addressing challenges related to parameter optimization, defect detection, and real-time monitoring in FGM fabrication. The review also highlights future research directions for ML-based methods in enhancing additive manufacturing processes for FGMs.</p>
+
+        <h3>Publications</h3>
+        <ol>
+            <li id="li2024dataset">L. Li, J.W. Merickel, Y. Tang, R. Song, J.E. Rittenhouse, <b><strong>A. Vakanski</strong></b>, and F. Xu, "Dataset of tensile properties for sub-sized specimens of nuclear structural materials," <em>arXiv</em>, 2024. [<a href="https://arxiv.org/pdf/2409.08306">arXiv</a>]&nbsp;<a href="../Articles/Li_2024_Dataset_of_Tensile_Properties_for_Subsized_Specimens.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li id="karimzadeh2024fgms">M. Karimzadeh, D. Basvoju, <b><strong>A. Vakanski</strong></b>, I. Charit, F. Xu, and X. Zhang, "Machine learning for additive manufacturing of functionally graded materials," <em>Materials</em>, vol. 17, no. 153, pp. 1–21, Jul. 2024. [DOI: <a href="https://doi.org/10.3390/ma17153673">10.3390/ma17153673</a>] [<a href="../Articles/ref_Karimzadeh2024.tex">Bibtex</a>] [<a href="https://www.mdpi.com/1996-1944/17/15/3673">MDPI Materials</a>]&nbsp;<a href="../Articles/Karimzadeh_(2024)_ML_for_additive_manufacturing_of_FGMs.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li id="li2024uncertainty">L. Li, J. Chang, <b><strong>A. Vakanski</strong></b>, Y. Wang, T. Yao, and M. Xian, "Uncertainty quantification in multivariable regression for material property prediction with Bayesian neural networks," <em>Scientific Reports</em>, vol. 14, no. 10543, pp. 1–15, May 2024. [DOI: <a href="https://doi.org/10.1038/s41598-024-61189-x">10.1038/s41598-024-61189-x</a>] [<a href="../Articles/ref_Li2024.tex">Bibtex</a>] [<a href="https://www.nature.com/articles/s41598-024-61189-x">Nature Articles</a>]&nbsp;<a href="../Articles/Li_(2024)-Uncertainty_Quantification_for_Creep_Prediction_with_BNNs.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

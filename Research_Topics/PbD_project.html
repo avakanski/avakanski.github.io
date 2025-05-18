@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandar Vakanski - Robot Programming by Demonstration</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <script src="../nav.js" defer></script>
+    
+    <!-- Add UI-specific CSS for the footer -->
+    <link rel="stylesheet" href="../ui-footer-styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="header-content">
+            <h1>Aleksandar (Alex) Vakanski</h1>
+            <a href="http://www.uidaho.edu/">
+                <img src="../UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+            </a>
+        </div>
+    </header>
+    
+    <nav id="main-nav"></nav>
+
+    <main>
+        <h3>Robot Programming by Demonstration</h3>
+        <p>The ability to transfer knowledge has played a quintessential role in the advancement of our species. 
+        Several evolutionary innovations have significantly leveraged the knowledge transfer. 
+        One example is rewiring of the neuronal networks in primates' brains to form the, so-called, mirror neuron systems, so that when we observe tasks performed by others, 
+        a section of the brain that is responsible for observation, as well as a section that is responsible for motor control are concurrently active. 
+        The mirror neuron system represents an especially important learning mechanism among toddlers and young kids stimulating them to acquire skills by 
+        imitating the actions of adults and other kids around them. However, the evolutionary processes and modifications are very slow and prodigal, and as we further developed, 
+        we tended to rely on employing our creativity in innovating novel means for transferring knowledge. 
+        By inventing writing and alphabets as language complements, we were able to record, share, and communicate knowledge at an accelerated rate. 
+        Other innovations that followed, such as the printing press, typing machine, television, personal computers, and world wide web each has 
+        revolutionized our ability to share knowledge and redefined the foundations for our current level of technological advancement.</p>
+
+        <p>As our tools and machines became more advanced and sophisticated, society recognized a need to transfer knowledge to our technological 
+        inventions in order to improve efficiency and productivity, or to reduce efforts or costs. For instance, in the manufacturing industry, 
+        robotic technology has emerged as a principle means in addressing the increased demand for accuracy, speed, and repeatability. 
+        Despite the continuous growth of the number of robotic applications across various domains, the lack of interfaces for quick transfer of 
+        knowledge in combination with the lack of intelligence and reasoning abilities has practically limited operations of robots to pre-programmed 
+        repetitive tasks performed in structured environments.</p>
+
+        <p>Robot programming by demonstration (PbD) is a promising form for transferring new skills to robots from observation of skill examples performed by a human demonstrator. 
+        Borrowed from the observational imitation learning among humans, PbD has a potential to reduce the costs for development of robotic applications in the 
+        industry by providing ways for intuitive robot programming by end-users who are experts in performing an industrial task but may not necessarily have robot programming skills. 
+        From a broader perspective, another important motivation for development of robot PbD systems is the old dream of humankind about robotic assistance in performing everyday domestic tasks. 
+        Future advancements in PbD would allow the general population to program domestic and service robots in a natural way by demonstrating the required task in front of a robot learner.</p>
+
+        <p>The principal steps in solving a typical PbD problem are depicted in the figure below, although the various variants of PbD systems often include additional steps.</p>
+
+        <figure class="centered-figure">
+            <img src="../Images/PbD_1.jpg" style="height: 400px;" alt="PbD process">
+            <figcaption>Figure: Principal steps in a PbD process.</figcaption>
+        </figure>
+
+        <p>The probabilistic representation of human motions provides a basis for encapsulating relevant information from multiple demonstrated examples of a task. 
+        Our team developed a PbD approach that employs hidden Markov model (HMM) to probabilistically encode demonstrated tasks at a trajectory level of abstraction. 
+        The learning method is designed to generate a reproduction plan for efficient generalization from multiple demonstrations, by taking into account the 
+        variability of the motions across the demonstrated set (shown below). 
+        Furthermore, we introduced another novel approach for probabilistic learning, which employs conditional random field (CRF) in the transfer of motor skills to robots. 
+        The discriminative character of CRF is used for spatio-temporal labeling of demonstrated trajectories and for extraction of essential features for task reproduction.</p>
+
+        <figure class="centered-figure">
+            <img src="../Images/PbD_2.jpg" style="height: 220px;" alt="PbD example 1">
+            <div class="image-row">
+                <img src="../Images/PbD_3.jpg" alt="PbD example 2">
+                <img src="../Images/PbD_4.jpg" alt="PbD example 3">
+                <img src="../Images/PbD_5.jpg" alt="PbD example 4">
+            </div>
+            <figcaption>Figure: PbD learning from multiple demonstrations.</figcaption>
+        </figure>
+
+        <p>Furthermore, our patented approach related to the use of vision-based control for task execution performs all the steps of a PbD process in the image space of a vision camera. 
+			The tasks are represented as trajectories of salient scene features projected onto the image plane of the camera. 
+			The task planning phase is formalized as a convex optimization problem, subject to constraints imposed by the demonstrated task, the image-based controller and the robotic platform. 
+			The main advantage of the presented learning approach is the enhanced robustness to modeling and measurement errors.</p>
+		<p>Our team developed a prototype of a commercial system for visual learning of human demonstrations. 
+			The current research efforts are directed toward improving the capacity for object tracking and pose estimation, and the existing graphical user interface of the system prototype.</p>
+
+		<figure class="centered-figure">
+            <img src="../Images/PbD_6.jpg" style="height: 180px;" alt="PbD application">
+            <figcaption>Figure: Example of PbD application.</figcaption>
+        </figure>
+	
+
+        <h3>Publications</h3>
+        <ol>
+            <li>M. Ghahramani, <b><strong>A. Vakanski</strong></b>, and F. Janabi-Sharifi, "6D object pose estimation for robot programming by demonstration," in <em>Proceedings of the International Symposium on Optomechatronic Technologies</em>, Cancun, Mexico, pp. 1–6, 2018. [<a href="../Articles/ref_Ghahramani2018.tex">BibTex</a>] [<a href="http://congresos.cio.mx/isot2018/">ISOT</a>]</li>
+            <li><b><strong>A. Vakanski</strong></b>, and F. Janabi-Sharifi, <em>Image-based Trajectory Robot Programming Planning Approach</em>, U.S. Patent 10,112,303 (filed Aug. 25, 2016, granted Oct. 30, 2018). Entered into the Canada National Phase under 043974-P0029-CA (Apr. 2016). Based on International Patent Application PCT/CA2014/051016 (Oct. 2014). [<a href="https://patents.google.com/patent/US10112303B2/en">U.S. Patent</a>]</li>
+            <li><b><strong>A. Vakanski</strong></b>, and F. Janabi-Sharifi, <em>Robot Learning by Visual Observation</em>, John Wiley &amp; Sons, Inc., 208 pages, ISBN-10: 1119091802, ISBN-13: 978-1119091806, 2017. [<a href="https://www.amazon.com/Learning-Visual-Observation-Aleksandar-Vakanski/dp/1119091802">Amazon</a>] [<a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119091802.html">Wiley</a>]</li>
+            <li><b><strong>A. Vakanski</strong></b>, F. Janabi-Sharifi, and I. Mantegh, "An image-based trajectory planning approach for robust robot programming by demonstration," <em>Robotics and Autonomous Systems</em>, vol. 98, pp. 241–257, Dec. 2017. [<a href="../Articles/ref_Vakanski2017a.tex">Bibtex</a>] [<a href="http://www.sciencedirect.com/science/article/pii/S0921889016305681">Elsevier Science Direct</a>]</li>
+            <li><b><strong>A. Vakanski</strong></b>, F. Janabi-Sharifi, and I. Mantegh, "Robotic learning of manipulation tasks from visual perception using a Kinect sensor," <em>International Journal of Machine Learning and Computing</em>, vol. 4, no. 2, pp. 163–169, Apr. 2014. [<a href="../Articles/ref_Vakanski2014.tex">Bibtex</a>] [<a href="http://www.ijmlc.org/index.php?m=content&amp;c=index&amp;a=show&amp;catid=44&amp;id=444">IJMLC</a>]&nbsp;<a href="../Articles/Vakanski%20et%20al%20(2014)%20-%20%20Robotic%20learning%20of%20manipulation%20tasks%20from%20visual%20perception%20using%20a%20Kinect%20sensor.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li><b><strong>A. Vakanski</strong></b>, I. Mantegh, A. Irish, and F. Janabi-Sharifi, "Trajectory learning for robot programming by demonstration using hidden Markov model and dynamic time warping," <em>IEEE Transactions on Systems, Man, and Cybernetics, Part B: Cybernetics</em>, vol. 42, no. 4, pp. 1039–1052, Aug. 2012. [DOI: <a href="https://doi.org/10.1109/TSMCB.2012.2185694">10.1109/TSMCB.2012.2185694</a>] [<a href="../Articles/ref_Vakanski2012.tex">Bibtex</a>] [<a href="https://ieeexplore.ieee.org/document/6151111">IEEE Explore</a>]&nbsp;<a href="../Articles/Vakanski_et_al_(2012)_Trajectory_Learning_for_Robot_PbD_Using_HMM_and_DTW.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li><b><strong>A. Vakanski</strong></b>, F. Janabi-Sharifi, and I. Mantegh, "Transferring skills to robots for tasks with cyclic motions via dynamical systems approach," in <em>Proceedings of the International Symposium on Optomechatronic Technologies</em>, Paris, France, pp. 1–6, 2012. [<a href="../Articles/ref_Vakanski2012a.tex">BibTex</a>] [<a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;arnumber=6403253&amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6403253">ISOT</a>]&nbsp;<a href="../Articles/Vakanski%20et%20al%20(2012a)%20-%20Transferring%20skills%20to%20robots%20for%20tasks%20with%20cyclic%20motions%20via%20dynamical%20systems%20approach.pdf"><img src="../Images/pdficon_small.gif" width="17" height="17" /></a></li>
+            <li><b><strong>A. Vakanski</strong></b>, F. Janabi-Sharifi, I. Mantegh, and A. Irish, "Trajectory learning based on Conditional Random Fields for robot programming by demonstration," in <em>Proceedings of the IASTED International Conference on Robotics and Applications</em>, Cambridge, USA, pp. 401–408, 2010. [<a href="../Articles/ref_Vakanski2010.tex">BibTex</a>] [<a href="http://www.actapress.com/Abstract.aspx?paperId=41546">IASTED</a>]&nbsp;<a href="../Articles/Vakanski et al (2010) - Trajectory learning based on CRF for robot PbD.pdf"><img src="../Images/pdficon_small.gif" width="17" height="17" /></a></li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

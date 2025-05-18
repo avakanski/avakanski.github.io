@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandar Vakanski - Human Movement Modeling in Biomedical Applications</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <script src="../nav.js" defer></script>
+    
+    <!-- Add UI-specific CSS for the footer -->
+    <link rel="stylesheet" href="../ui-footer-styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="header-content">
+            <h1>Aleksandar (Alex) Vakanski</h1>
+            <a href="http://www.uidaho.edu/">
+                <img src="../UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+            </a>
+        </div>
+    </header>
+    
+    <nav id="main-nav"></nav>
+
+    <main>
+        <h3>Human Movement Modeling in Biomedical Applications</h3>
+        <p>Physical therapy and rehabilitation is essential for functional recovery after stroke, surgery, or musculoskeletal trauma. 
+        Although the largest portion of rehabilitation is performed in a home-based setting, 
+        numerous barriers lead to low patient motivation and poor adherence rates to the prescribed rehabilitation plans.
+        The primary barrier impacting rehabilitation compliance is the lack of continuous monitoring, supervision, 
+        and feedback of patient performance and progress by a healthcare professional. 
+        Consequently, the critical need for the design and development of tools to support home-based therapy in the outpatient setting has been widely recognized. 
+        The absence of such tools will continue to negatively impact the length of rehabilitation programs and healthcare costs.</p>
+        <p>The project aims to exploit recent progress in deep artificial neural networks (NNs) toward the development of methods for modeling and assessment 
+        of human motions in physical rehabilitation applications. Motivation for this project stems from the demonstrated potential of deep NN architectures to 
+        encapsulate highly nonlinear relations among sets of observed and latent variables, as well as the capacity to encode data features at multiple hierarchical levels of abstraction. 
+        These properties enabled deep NNs to outperform conventional machine learning approaches across various tasks and application domains.</p>
+        <p>Although most prior works on automated assessment of movement quality in rehabilitation programs employ distance-based functions 
+        for movement evaluation, developing effective and practical approaches is strongly predicated on the provision of effective and powerful models of human movements. 
+        Hence, the abilities of deep NNs for hierarchical data representation could provide important advantages in modeling spatial and temporal variations in movement data. 
+        On the other hand, training deep NN models requires large databases of labeled examples, and yet, creating databases is a painstaking, expensive, and time-consuming process. 
+        This project aims to close this loop by: (a) formulating metrics for assigning clinical quality scores to rehabilitation movements; 
+        (b) creating open datasets of rehabilitation exercises; and (c) designing deep NNs for movement modeling and assessment.</p>
+        
+        <figure class="centered-figure">
+            <img src="../Images/Rehabilitation.jpg" style="height: 220px;" alt="Rehabilitation">
+            <figcaption>Figure: Assessment of rehabilitation movements..</figcaption>
+        </figure>
+        
+        <p>Our long-term goal is to develop a commercial system for assessment of patient performance in home-based rehabilitation programs. 
+        The system will employ: (1) a color/depth sensor (e.g., a Kinect like camera) for capturing a patient's movements during sessions, 
+        (2) a personal computer, and (3) a computer software application for data analysis, end-user interaction, and data streaming to a healthcare provider. 
+        Providing that a patient already possesses a personal computer, the system will be inexpensive with the cost encompassing the color-depth sensor (sold for $150-$250) 
+        and the software program. An alternative solution will be to simply use a cell-phone instead, provided that the motion capturing abilities of cell-phone 
+        cameras will achieve sufficient accuracy for rehabilitation assessment.</p>
+        <p>To this end, we conducted preliminary studies toward automated assessment of rehabilitation exercises, 
+        based on funding support of an NIH-IMCI (<a href="http:/imci.uidaho.edu/">Institute for Modeling Collaboration and Innovation</a> at the University of Idaho) grant. 
+        Our prior work includes a framework for movement assessment using a spatio-temporal NN, 
+        statistical approaches for movement modeling, and a taxonomy of metrics for assessing the consistency of human movements.</p>
+        <p>We created a dataset <a href="http://www.webpages.uidaho.edu/ui-prmd/">UI-PRMD (University of Idaho – Physical Rehabilitation Movement Dataset)</a>. 
+        The dataset is freely available to the public and involves 10 repetitions of 10 exercises performed by a group of 10 healthy participants. 
+        The movements were recorded with a Vicon optical tracking system and a Kinect sensor.</p>
+        
+        <figure class="centered-figure">
+            <img src="../Images/Rehab_3.jpg" "alt="Rehabilitation dataset example">
+            <figcaption>Figure: Exercises in the UI-PRMD dataset.</figcaption>
+        </figure>
+        
+        <p>In another work, our team designed a deep learning model based on generative adversarial networks (GAN) for assessment of individual repetitions in rehabilitation exercises. 
+        For instance, the right figure below displays the ground truth quality scores for a set of repetitions and the predicted quality scores by the network, 
+        where the predicted scores closely follow the true scores. The proposed GAN model was also trained to generate synthetic repetitions that resemble the human captured data, 
+        which can potentially be used to augment datasets of rehabilitation movements.</p>
+        
+        <figure class="centered-figure">
+  
+                <img src="../Images/Rehab_1.jpg" style="height: 160px;" alt="Rehabilitation GAN example 1">
+                <img src="../Images/Rehab_2.jpg" style="height: 160px;" alt="Rehabilitation GAN example 2">
+        
+            <figcaption>Figure: GAN-based network for rehabilitation movement assessment.</figcaption>
+        </figure>
+
+        <h3>Publications</h3>
+        <ol>
+            <li>Y. Liao, <b><strong>A. Vakanski</strong></b>, M. Xian, D. Paul, and R. Baker, "A review of computational approaches for evaluation of rehabilitation exercises," <em>Computers in Biology and Medicine</em>, vol. 119, article no. 103687, Apr. 2020. [<a href="../Articles/ref_Liao2020a.tex">Bibtex</a>] [<a href="https://www.sciencedirect.com/science/article/pii/S0010482520300780">Elsevier Science Direct</a>]&nbsp;<a href="../Articles/Liao%20et%20al%20(2020)%20-%20A%20Review%20of%20Computational%20Approaches%20for%20Rehabilitation%20Evaluation.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li>Y. Liao, <b><strong>A. Vakanski</strong></b>, and M. Xian, "A deep learning framework for assessing physical rehabilitation exercises," <em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>, vol. 28, no. 2, pp. 468–477, Feb. 2020. [<a href="../Articles/ref_Liao2020.tex">Bibtex</a>] [<a href="https://ieeexplore.ieee.org/abstract/document/8957502">IEEE Explore</a>]&nbsp; <a href="../Articles/Liao%20et%20al%20(2020)%20-%20A%20DL%20Framework%20for%20Assessing%20Rehabilitation.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li>C. Williams, <b><strong>A. Vakanski</strong></b>, S. Lee, and D. Paul, "Assessment of physical rehabilitation movements through dimensionality reduction and statistical modeling," <em>Medical Engineering & Physics</em>, vol. 74, pp. 13–22, Dec. 2019. [<a href="../Articles/ref_Williams2019.tex">Bibtex</a>] [<a href="https://www.sciencedirect.com/science/article/pii/S1350453319302127?via%3Dihub">Elsevier Science Direct</a>]</li>
+            <li>L. Li, and <b><strong>A. Vakanski</strong></b>, "Generative adversarial networks for generation and classification of physical rehabilitation movement episodes," <em>International Journal of Machine Learning and Computing</em>, vol. 8, no. 5, pp. 428–436, Oct. 2018. [<a href="../Articles/ref_Li2018.tex">Bibtex</a>] [<a href="http://www.ijmlc.org/index.php?m=content&c=index&a=show&catid=80&id=845">IJMLC</a>]&nbsp; <a href="../Articles/Li,%20Vakanski%20(2018)%20-%20Generative%20Adversarial%20Networks%20for%20Generation%20and%20Classification%20of%20Physical%20Rehabilitation%20Movement%20Episodes.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li><b><strong>A. Vakanski</strong></b>, H-p. Jun, D. Paul, and R. Baker, "A data set of human body movements for physical rehabilitation exercises," <em>Data</em>, vol. 3, no. 2, pp. 1–15, Jan. 2018. [<a href="../Articles/ref_Vakanski2018.tex">Bibtex</a>] [<a href="http://www.mdpi.com/2306-5729/3/1/2">MDPI Data in Science</a>]&nbsp; <a href="../Articles/Vakanski%20et%20al%20(2018)%20-%20A%20data%20set%20of%20human%20body%20movements%20for%20physical%20rehabilitation%20exercises.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li><b><strong>A. Vakanski</strong></b>, J. M. Ferguson, and S. Lee, "Metrics for performance evaluation of patient exercises during physical therapy," <em>International Journal of Physical Medicine and Rehabilitation</em>, vol. 5, no. 3, pp. 1–6, Jun. 2017. [<a href="../Articles/ref_Vakanski2017.tex">Bibtex</a>] [<a href="https://www.omicsonline.org/open-access/metrics-for-performance-evaluation-of-patient-exercises-during-physicaltherapy-2329-9096-1000403.php?aid=89638">Int. J. Phys. Med. Rehabil.</a>]&nbsp;  <a href="../Articles/Vakanski%20et%20al%20(2017)%20-%20Metrics%20for%20Performance%20Evaluation%20of%20Patient%20Exercises%20during%20Physical%20Therapy.pdf"><img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+            <li><b><strong>A. Vakanski</strong></b>, J. M. Ferguson, and S. Lee, "Mathematical modeling and evaluation of human motions in physical therapy using mixture density neural networks," <em>Journal of Physiotherapy and Physical Rehabilitation</em>, vol. 1, no. 4, pp. 1–10, Dec. 2016. [<a href="../Articles/ref_Vakanski2016.tex">Bibtex</a>] [<a href="https://www.omicsonline.org/open-access/mathematical-modeling-and-evaluation-of-human-motions-in-physicaltherapy-using-mixture-density-neural-networks.php?aid=84401">Physiother. Rehabil.</a>]&nbsp;  <a href="../Articles/Vakanski%20et%20al%20(2016)%20-%20Mathematical%20modeling%20and%20evaluation%20of%20human%20motions%20in%20PT%20using%20MDNN.pdf"> <img height="17" src="../Images/pdficon_small.gif" width="17" /></a></li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
