@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Driverless Cars Work - Aleksandar Vakanski</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <script src="../nav.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Aleksandar (Alex) Vakanski</h1>
+                <a href="http://www.uidaho.edu/">
+                    <img src="../UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+                </a>
+            </div>
+        </header>
+
+        <nav id="main-nav"></nav>
+
+        <main>
+            <article class="blog-post">
+                <h2>How Driverless Cars Work</h2>
+                <p class="post-date"><em>Posted November 2015</em></p>
+
+                <p>This blog explains the basic principles of operation of driverless cars. We'll look at Google's driverless (or self-driving) car as the most well-known, although most (if not all) of the major car manufacturers have developed proprietary driverless cars with different degrees of success/autonomy.</p>
+
+                <p>The following 14:28 minutes video explains the operation of Google's car, presented by its main developers, Stanford University professor Sebastian Thrun and Google team leader Chris Urmson.</p>
+
+                <p><a href="https://www.youtube.com/watch?v=YXylqtEQ0tk">https://www.youtube.com/watch?v=YXylqtEQ0tk</a></p>
+
+                <p>Admittedly, the quality of the video and audio is not great, but I couldn't find a better video that explains how their driverless car works. On the other hand, if you want to see a general, less technical and good quality, video about Google's driverless car, please check the TED talk by Chris Urmson following this <a href="https://www.youtube.com/watch?v=tiwVMrTLUWg">link</a>.</p>
+
+                <p>Key enabling technologies of driverless cars are a sensory system for perception of the world, and a machine learning algorithm for processing the sensory data and making decisions about the car's actions.</p>
+
+                <p>The perception system consists of a set of sensors, selected to complement the limitations of the individual sensors, to provide redundancy in dealing with uncertain and noisy signals, as well as for improved safety under possible sensors failures. A standard suite of sensors in driverless cars (shown in the figure below) includes: a GPS, a lidar, a vision camera, wheel encoders, and a set of radars and/or ultrasonic sensors.</p>
+
+                <figure class="centered-figure">
+                    <img src="../Images/Google_Driverless_Car.jpg" alt="Google Driverless Car" style="height: 420px; width: 400px;">
+                    <figcaption>Figure: Google Driverless Car. Image source: <a href="http://eandt.theiet.org/news/2014/may/google-driverless.cfm">http://eandt.theiet.org/news/2014/may/google-driverless.cfm</a></figcaption>
+                </figure>
+
+                <p>The GPS (global positioning system) provides information about the current location of the driverless car on the road by using Google Maps. Thus the car gets knowledge of the road curvature, approaching intersections, and other useful information, e.g., one-way streets, etc. However, the accuracy of the GPS is at the level of several meters, which, for example, is not sufficient for making a precise stop at the stop line of an intersection.</p>
+
+                <p>The most important sensory mode of the car is the lidar (LIght Detection And Ranging), which is also often referred to as a laser rangefinder. Google's driverless car uses a Velodyne 64-beam lidar, mounted on the roof of the vehicle. The sensor has 64 lasers emitting infrared light beams and the same number of laser receivers (i.e., photo-diodes), whereby the distance map of the surrounding is formed by calculating the time-of-flight of the laser beams. The lidar rotates and creates 360º scans of the environment (see the two figures at the bottom of the page). The light emitters/receivers are arranged in an array that covers a vertical field-of-view of 27º. By fusing the information from the 64 lasers, the system is able to build a high-resolution 3-dimensional map of the environment around the car. These 3D maps are updated about 15 times a second. An excellent explanation of the Velodyne lidar can be found <a href="http://www.hizook.com/blog/2009/01/04/velodyne-hdl-64e-laser-rangefinder-lidar-pseudo-disassembled">here</a>. It is worth mentioning that the lidar sensor costs $75,000, which is a significant contributor toward the higher price of the driverless car in comparison to an average car.</p>
+
+                <figure class="centered-figure">
+                    <img src="../Images/Lidar_Map_1.jpg" alt="Lidar Map 1" style="height: 233px; width: 350px;">
+                    <figcaption>Figure: Lidar Map. Image source: <a href="https://3dprint.com/116569/self-driving-cars-privacy/">https://3dprint.com/116569/self-driving-cars-privacy/</a></figcaption>
+                </figure>
+
+                <p>The vision camera is used for interpreting the traffic light signals, lane markers, and traffic signs. Note that a vision camera is necessary, since the lidar sensor provides 3D maps of the world in terms of distances to the objects around the car, but does not provide color information (i.e., it cannot tell the color of the traffic light, a traffic sign is perceived as a flat blank plate, etc.).</p>
+
+                <p>The encoder sensors measure the number of revolutions of the car's wheels. This information helps in tracking the location of the car. The latest Google car also includes inertial sensors for measuring velocity and direction of movement.</p>
+
+                <p>The radars and/or ultrasonic sensors are mounted on the front and rear bumpers. They measure the distance to the nearby objects, i.e., are employed for estimating the near-range distance to other vehicles and objects in front of the car, to the curb, etc. These sensors have been used extensively in the past for autonomous parking.</p>
+
+                <p>Based on the information from the set of sensors, the car has to first figure out its location in the world, and it also has to build and maintain situational awareness with regards to other vehicles, pedestrians, cyclists. Afterwards, it has to decide which course of action to take, based on the knowledge of the road, the traffic signalization, and the other traffic participants.</p>
+
+                <figure class="centered-figure">
+                    <img src="../Images/Lidar_Map_2.jpg" alt="Lidar Map 2" style="height: 237px; width: 400px;">
+                    <figcaption>Figure: Lidar Map. Image source: <a href="http://spectrum.ieee.org/automaton/robotics/artificial-intelligence/how-google-self-driving-car-works">http://spectrum.ieee.org/automaton/robotics/artificial-intelligence/how-google-self-driving-car-works</a></figcaption>
+                </figure>
+
+                <p>In general, the world around the car behaves stochastically and it is very unpredictable, therefore dealing with all the uncertainties, especially the ones originating from the other traffic participants, is a very challenging problem. In order to reduce the complexity, the driverless cars are first trained to drive a specific route, by driving along that route several times. The sensory data collected during previous training drives are used for creating a model of the route. For instance, by averaging the route maps from the training examples the moving objects can be eliminated from the model of the route, so that only the stationary objects along the route would remain in the generalized model of the route. The next time the car drives along the route, the algorithm compares the current state of the world with the detailed 3D map of the route by computing the correlation between the two. The identified differences are either moving objects or new stationary objects on the road, and they require full attention in making driving decisions. On the other hand, a mail post or an electrical pole that is always at the same position along the road will be ignored, and not mistakenly classified as a pedestrian. Also, at an intersection, the lidar maps provide information regarding the exact location of the traffic light, which is very useful in processing the images from the vision sensor, and reducing the size of the region of interest within the image frames in searching for the traffic light.</p>
+
+                <p>Conclusively, the technology has made a quantum leap since the days of the 2004 DARPA Grand Challenge. Some of the challenging cases that require further improvement are driving in rainy and snowy conditions, driving in parking lots, dealing with detours or lane conversions during road constructions, and similar. The legal and liability obstacles would probably be even more difficult to overcome. In any case, the driverless cars will be a reality on public roads very soon. The benefits will be safer and more efficient transportation resulting in a reduced number of traffic accidents, reduced traffic congestions, and more efficient fuel consumption.</p>
+
+                <p><a href="../blog.html">Back to Blog</a></p>
+            </article>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaGo - Aleksandar Vakanski</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <script src="../nav.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Aleksandar (Alex) Vakanski</h1>
+                <a href="http://www.uidaho.edu/">
+                    <img src="../UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+                </a>
+            </div>
+        </header>
+
+        <nav id="main-nav"></nav>
+
+        <main>
+            <article class="blog-post">
+                <h2>AlphaGo</h2>
+                <p class="post-date"><em>Posted May 2016</em></p>
+
+                <p>Recently, a program (or if you prefer, a computer) named AlphaGo won a match in the board game Go against one of the best players in the world – the South Korean Lee Sedol. Go is an ancient board game that is popular in South Asia, and it is considered one of the most complex board games, due to the very high number of possible board move configurations  (e.g., higher than the possible combinations in chess). In a series of five games, the final score was 4:1 in favor of AlphaGo. It is worth mentioning that before that match AlphaGo defeated the European Go champion Fan Hui in a five-game match with a score of 5:0.</p>
+
+                <p>AlphaGo was developed by DeepMind, which is a London based company owned by Alphabet (read Google).</p>
+
+                <p>Knowing that 19 years ago the Deep Blue computer developed by IBM defeated the then-world chess champion, and one of the best chess players of all time, Garry Kasparov, the win by AlphaGo in another board game against one of the top human players may not seem like a big deal. However, it is a huge deal, since there is a fundamental difference between the two computer programs. Namely, while Deep Blue was developed in a supervised manner with the involvement of a number of chess experts, AlphaGo learned the Go game mostly on its own without being explicitly taught by human task exerts. This type of problem-solving in the field of machine learning is referred to as unsupervised learning.</p>
+
+                <p>Training AlphaGo involved first analyzing historical Go games to achieve an initial level of proficiency. Afterwards, AlphaGo was left to plays millions of games against itself, i.e., another copy of AlphaGo, whereby the program learned how to valuate different moves in relation to board configurations. The algorithm employs deep neural networks in combination with Monte-Carlo tree search for training from historical games, and reinforcement learning in the self-play games. Reinforcement learning is another machine learning method, where the learning entails exploration of different solutions and assigning rewards or penalty points to the solutions, with a goal to recognize solutions that maximize the reward points.</p>
+
+                <p>The match was received by the Artificial Intelligence community as a remarkable victory of the field that has been hoped-for (or in some other circles maybe feared-from) for a long time. The demonstration that a silicon-based machine using artificial intelligence can learn a complex task primarily on its own based on a provision of computational tools and many examples of the task, and that it can match the level of biological carbon-based intelligence of a top human expert in that task, reveals a potential in the future to learn other tasks and deliver more practical applications. Adequate initial candidates would be tasks which similarly to the Go game can be formulated through a set of rules and allow access to a large data collection.</p>
+
+                <p>The following 7:52 minutes video explains the approach of the DeepMind team in creating AlphaGo.</p>
+
+                <p><a href="https://www.youtube.com/watch?v=g-dKXOlsf98Y">https://www.youtube.com/watch?v=g-dKXOlsf98</a></p>
+
+                <figure class="centered-figure">
+                    <img src="../Images/Go.jpg" alt="Go board game" style="height: 298px; width: 465px;">
+                    <figcaption>Figure: Go board game.</figcaption>
+                </figure>
+
+                <h3>Quotes:</h3>
+                <blockquote>
+                    <p>Lee Sedol (after the loss): "I felt powerless. It was AlphaGo's total victory."</p>
+                    <p>Toby Manning, Go referee: "People were expecting that computers would reach professional human level, but the feeling was it was going to take another 10 years or so."</p>
+                    <p>Lee Sedol: "Robots will never understand the beauty of the game the same way that we humans do."</p>
+                    <p>Deep Blue's Murray Campbell: "The era of board games is more or less done. It's time to move on."</p>
+                </blockquote>
+
+                <p><a href="../blog.html">Back to Blog</a></p>
+            </article>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

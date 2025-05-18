@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting Protein Folding with Deep Learning - Aleksandar Vakanski</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <script src="../nav.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Aleksandar (Alex) Vakanski</h1>
+                <a href="http://www.uidaho.edu/">
+                    <img src="../UI_logo.jpg" alt="University of Idaho logo" class="ui-logo">
+                </a>
+            </div>
+        </header>
+
+        <nav id="main-nav"></nav>
+
+        <main>
+            <article class="blog-post">
+                <h2>Predicting Protein Folding with Deep Learning</h2>
+                <p class="post-date"><em>Posted December 2021</em></p>
+
+                <p><em>AphaFold</em> is an AI method for predicting the 3-dimensional shape of proteins, and it is universally considered one of the most important recent scientific breakthroughs. AlphaFold was developed by <a href="https://deepmind.com/">DeepMind</a>, the U.K.-based AI-focused subsidiary of Alphabet Inc., that is, Google.</p>
+
+                <p>As we know, <em>proteins</em> are essential building blocks of cells in all living organisms. Proteins represent sequences of amino acids; there are more than 20 different amino acids that can make up a protein. The 3-dimensional structures of proteins consist of many intricate folds, formed via complex interactions between the constituent amino acids. The figure shows the four principal structures of protein folding: primary structure (chain of amino acids), secondary structure (alpha helices and beta-pleated sheets), tertiary structure (3D repeated pattern), and quaternary structure (interactions of multiple amino acid chains).</p>
+
+				<figure class="centered-figure">
+                    <img src="../Images/Protein_structures.png" alt="Four structures of protein folding" style="max-width: 100%; height: auto;">
+                    <figcaption>Figure: Four structures of protein folding. <a href="https://www.semanticscholar.org/paper/Investigating-Machine-Learning-Based-Prediction-of-Abbasi/ae0dd9841f21b03ae434ac506cbf0ba10705eb62">Source link</a>.</figcaption>
+                </figure>
+
+                <p>Scientists in molecular biology have long observed that the 3D structure of proteins is directly related to their functionality. However, understanding how the sequential ordering and resulting interactions of amino acids impact the fold forming and the final spatial shape of a protein was for a long time beyond the capabilities of our predictive methods. This is referred to as the “protein folding problem,” and represents one of the grand challenges in biology.</p>
+
+                <p>Several laboratory methods are presently used to experimentally determine the 3D shape of proteins. <a href="https://en.wikipedia.org/wiki/X-ray_crystallography">X-ray crystallography</a> entails recording the diffraction of X-rays when projected onto crystallized proteins. Another popular method that has been replacing X-ray crystallography is <a href="https://en.wikipedia.org/wiki/Cryogenic_electron_microscopy">cryo-electron microscopy</a>. This technique cools down samples to very low (cryogenic) temperatures and measures the scattering of a beam of applied electrons. Still, these laboratory methods are laborious, time-consuming, and expensive. As a result, although we know of over 200 million proteins across all living organisms, the 3D structure of only a small fraction of all proteins has been experimentally determined (about 400 thousand proteins).</p>
+
+                <p>To address the challenge of protein-structure predicting and motivate the development of new computational methods, a competition called CASP (Critical Assessment of Techniques for Protein Structure Prediction) has been organized biennially for over 25 years. CASP invites research teams to submit solutions for a target set of proteins (e.g., there were 97 target proteins in 2020), whereas a team of scientists compares the anonymized predictions for the 3D shapes of the proteins by the competing teams to the corresponding shapes obtained by laboratory experiments. A CASP score of 100 means that the predicted 3D shapes are identical matches to the experimentally obtained ones.</p>
+
+                <p>The figure below shows the best CASP scores since 2006. AlphaFold 1 by DeepMind was submitted to CASP in 2018 and outperformed existing methods by a substantial margin, achieving a median global distance CASP score of 58.9. An improved version AlphaFold 2 submitted to the 2020 challenge achieved even better performance, with a median CASP score of 87. Specifically, AlphaFold 2 obtained a score over 92 for more than half of the target proteins, as well as, 88% of the predicted 3D shapes had an average distance to the experimental shape of less than 4 Angstroms (where 1 Angstrom = 10<sup>-10</sup> meters, and the radii of atoms range from 1A to 5A). </p>
+
+                <figure class="centered-figure">
+                    <img src="../Images/CASP_scores.png" alt="CASP global distance scores" style="max-width: 100%; height: auto;">
+                    <figcaption>Figure: CASP global distance scores. <a href="https://www.nature.com/articles/d41586-020-03348-4">Source link</a>.</figcaption>
+                </figure>
+
+                <p>Both AlphaFold 1 and 2 employ deep learning neural networks for predicting the distance between the amino acids in proteins. Interestingly, the architecture of the neural layers in AlphaFold 2 is based on the attention-based transformer architectures, which have been initially developed for training large language models (e.g., GPT-3 is one of the most well-known such models). A high-level description of the block design of AlphaFold 2 is shown below.</p>
+
+                <figure class="centered-figure">
+                    <img src="../Images/AlphaFold_2.png" alt="AlphaFold 2 block design" style="max-width: 100%; height: auto;">
+                    <figcaption>Figure: AlphaFold 2 block design is based on sequence-residue attention modules. <a href="https://deepmind.com/blog/article/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology">Source link</a>.</figcaption>
+                </figure>
+
+                <figure class="centered-figure">
+                    <img src="../Images/AlphaFold_prediction.gif" alt="Experimentally obtained shape and predicted shape by AlphaFold 2" style="max-width: 100%; height: auto;">
+                    <figcaption>Figure: Experimentally obtained shape (green) and predicted shape by AlphaFold 2 (blue) for two proteins. <a href="https://deepmind.com/blog/article/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology">Source link</a>.</figcaption>
+                </figure>
+
+                <p>In 2021, DeepMind open-sourced the codes for AlphaFold 2 (<a href="https://github.com/deepmind/alphafold">link</a> to the repository on GitHub). Also, they released a database consisting of over 360 thousand proteins (<a href="https://alphafold.ebi.ac.uk/">link</a>), including the human proteome and proteomes of 20 organisms (<a href="https://en.wikipedia.org/wiki/Proteome">proteome</a> is the set of all expressed proteins in an organism). </p>
+
+                <p>Many scientists have described the accomplishment by AlphaFold as nothing short of transformational and sensational. The ability to accurately predict protein structures can revolutionize our understanding of protein functions in cell mechanisms, and in biology and medicine in general, and it can spur a wave of innovation in various medical applications, such as drug discovery and protein design.</p>
+
+                <p>Here are two videos that provide explanations of the protein folding prediction by AlphaFold: one short 1:51 minute video (<a href="https://www.youtube.com/watch?v=KpedmJdrTpY">link</a>), and one longer 12:00 minute video (<a href="https://www.youtube.com/watch?v=yhJWAdZl-Ck">link</a>).</p>
+
+                <p><a href="../blog.html">Back to Blog</a></p>
+            </article>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Aleksandar Vakanski. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
